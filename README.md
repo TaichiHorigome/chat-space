@@ -19,16 +19,17 @@
 |name|string|null: false|
 
 ### Association
-- has_many :user
+- has_many :users
 - has_many :comments
 
 ## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
-|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|text|text||
+|image|text||
 
 ### Association
 - belongs_to :group

@@ -21,7 +21,7 @@ $(function(){
 			return html;
 		} else {
 			var html =
-			 `<div class="message">
+			`<div class="message">
 					<div class="upper-message">
 						<div class="upper-message__user-name">
 							${message.user_name}
@@ -38,8 +38,8 @@ $(function(){
           </div>`
         return html;
       };
-		}
-$('#new_message').on('submit', function(e){
+  }
+	$('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -51,15 +51,15 @@ $('#new_message').on('submit', function(e){
       processData: false,
       contentType: false
     })
-.done(function(data){
-	var html = buildHTML(data);
-	$('.messages').append(html);
-	$('form')[0].reset();
-	$('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-})
-.fail(function(){
-	alert("メッセージ送信に失敗しました");
-});
-return false;
-})
+  	.done(function(data){
+			var html = buildHTML(data);
+			$('.messages').append(html);
+			$('form')[0].reset();
+			$('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+		})
+		.fail(function(){
+  		alert("メッセージ送信に失敗しました");
+		});
+		return false;
+	})
 });

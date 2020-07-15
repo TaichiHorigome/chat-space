@@ -10,7 +10,7 @@ set :rbenv_ruby, "~> 2.5.1" #カリキュラム通りに進めた場合、2.5.1�
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['<i-05b08f920e64e96db/.ssh/key_pem.pem>'] 
+                  keys: ['<~/.ssh/chat-space.pem>'] 
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 

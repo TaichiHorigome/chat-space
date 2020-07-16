@@ -1,4 +1,4 @@
-server '52.192.159.52/', user: 'ec2-user', roles: %w{app db web}
+server '52.192.159.52', user: 'ec2-user', roles: %w{app db web}
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
